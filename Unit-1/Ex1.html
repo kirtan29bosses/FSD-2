@@ -1,0 +1,23 @@
+<!-- Write a script to define 2 json objects named 'div1' & 'div2' having an array to store
+name of student. At last, both div objects should be concat with alphabetically sorted.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sub={ 
+            "div1":{"name":["Z","B","H"]},
+            "div2":{"name":["Y","A","G"]}
+        };
+        const obj1 = sub.div1.name
+        const obj2 = sub.div2.name
+        const data = obj1.concat(obj2).sort()
+        console.log(data)
+    </script>
+</body>
+</html>
