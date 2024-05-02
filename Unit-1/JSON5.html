@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sub={ 
+            "FSD":
+        [
+            {"Topic":"HTML",
+            "Course":"Beginer",
+            "Content":["Tables", "Tags", "Form"]
+            },
+            {"Topic":"CSS",
+            "Course":"Beginer",
+            "Content":["Tables", "Tags", "Form"]
+            }
+        ]
+        };
+        // for (const a of sub.FSD) {
+        //     document.write(a.Topic + "<br>")
+        //     document.write(a.Course + "<br>")
+        //     document.write(a.Content + "<br>")
+        // }
+        for (const a in sub.FSD) {
+            for (const b in sub.FSD[a]) {
+                document.write(sub.FSD[a][b] + "<br>")
+            }
+        }
+    </script>
+</body>
+</html>
