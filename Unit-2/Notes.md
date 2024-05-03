@@ -57,7 +57,7 @@ undefined
 50
 ---------------------------------------
 >  .save Node1.js
-Session saved to: Node1.js
+Session saved to: Node1.js (Will create file in VsCode)
 ---------------------------------------
 > .load Node1.js
 ---------------------------------------
