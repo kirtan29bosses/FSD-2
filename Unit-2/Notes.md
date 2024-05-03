@@ -90,3 +90,5 @@ undefined
 ----------------------------------------
 > repl.repl.ignoreUndefined=true (For removing undefined word)
 > repl.repl.ignoreUndefined=false (For getting undefined word)
+----------------------------------------
+> Press ctrl+D to get out of node
