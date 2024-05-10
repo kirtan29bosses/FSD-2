@@ -1,0 +1,20 @@
+<!-- Initialize 2 variables and increment both the variables each time & display the addition of
+both the variables at interval of 1sec. -->
+
+<html>
+    <head></head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            let a = 2;
+            let b = 5;
+            function add(a,b) {
+                sum = a+b
+                document.getElementById("demo").innerHTML = sum
+            }
+            setInterval(function() {
+                add(++a,++b)
+            },1000);
+        </script>
+    </body>
+</html>

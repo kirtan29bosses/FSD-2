@@ -1,0 +1,18 @@
+ <!-- Display addition of 2 nos. on browser using call back function -->
+
+<html>
+    <head></head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            function mydisplay(sum) {
+                document.getElementById("demo").innerHTML = sum
+            }
+            function mycalls(a,b,mydisplay) {
+                sum = a+b
+                mydisplay(sum)
+            }
+            mycalls(13,15,mydisplay)
+        </script>
+    </body>
+</html>
