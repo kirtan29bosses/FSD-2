@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> Cookie-3 </title>
+    </head>
+<body>
+    <form action="/submit_feedback" method="post">
+        <label> Name </label>
+        <input type="text" maxlength="30" placeholder="Name" name="name"> <br>
+        <label> Email </label>
+        <input type="email" placeholder="email" name="email" required> <br>
+        <label> Message </label>
+        <textarea rows="10" cols="10" name="message"> </textarea> <br>
+        <label> Rating </label>
+        <input type="radio" name="rating" value="Bad"> BAD
+        <input type="radio" name="rating" value="Average"> AVERAGE
+        <input type="radio" name="rating" value="Good"> GOOD
+        <input type="radio" name="rating" value="Very Good"> VERY GOOD
+        <input type="radio" name="rating" value="Excelent"> EXCELENT
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
