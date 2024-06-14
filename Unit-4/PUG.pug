@@ -1,0 +1,46 @@
+//- No need to run the program again 
+
+html
+head
+title PUG Tutorial 
+body 
+h1 RAJ
+h1 PATEL
+h5(style="text-transform:uppercase; color:red") Hello
+p
+| Hi! I'm Raj Patel.
+| I'm CSE student.
+| My roll no. is "22002171210123".
+ul 
+ li Apple 
+ li Mango 
+ li Banana 
+ol 
+ li Raj 
+ li Zulfi 
+ li Jenish
+ li Kishor
+a(href="/about" target="_blank") About
+table(border='1px solid' style="color:red")
+ tr 
+ th Name 
+ th Age
+ tr 
+ td Raj
+ td 19
+ tr 
+ td Zulfi
+ td 19
+ tr 
+ td Jenish
+ td 19
+
+//- Unbuffered Code[initialize]
+-var number = 4
+-var color = 'red'
+-var list = ["India","USA","UK"]
+
+//- Buffered Code
+h4="3 times no. is : " + number*3 
+h3="I like " + color + " color"
+h3="Country : " + list[2]
