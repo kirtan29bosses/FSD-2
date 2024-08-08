@@ -1,5 +1,5 @@
 Download:-
-(1) https://www.mongodb.com/try/download/shell \n
+(1) https://www.mongodb.com/try/download/shell
 (2) https://www.mongodb.com/try/download/compass
 (3) Open cmd and write "mongosh" and run.
 
