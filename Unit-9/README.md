@@ -1,7 +1,6 @@
 Download:-
 (1) https://www.mongodb.com/try/download/shell
 (2) https://www.mongodb.com/try/download/compass
-(3) Open cmd and write "mongosh" and run.
 
 After downloading "https://www.mongodb.com/try/download/shell", extract the file, then open file and click on "bin"
 and then copy the exe files to "C" drive.
@@ -10,6 +9,8 @@ Steps to setup mongodb:-
 (1) https://www.mongodb.com/
 (2) Inside "Products" go to "Community Edition".
 (3) Then click on "Download Community".
+
+Now, open cmd and write "mongosh" and run.
 
 After running cmd:-
 (1) test> showdbs
