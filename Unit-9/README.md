@@ -3,6 +3,9 @@ Download:-
 (2) https://www.mongodb.com/try/download/compass
 (3) Open cmd and write "mongosh" and run.
 
+After downloading "https://www.mongodb.com/try/download/shell", extract the file, then open file and click on "bin"
+and then copy the exe files to "C" drive.
+
 Steps to setup mongodb:-
 (1) https://www.mongodb.com/
 (2) Inside "Products" go to "Community Edition".
@@ -24,6 +27,40 @@ After running cmd:-
 (12) db.Student.remove({name: "Kishor"})
 (13) db.Student.find({Rollno: 106}, {id: false, Age: false, Rollno: false}) [to display selected output]
 (14) db.Student.findOne({name: "Dhairya"}) [if there are multiple same data]
+(15) db.Student.find().limit(1) [it will limit no.of outputs]
+(16) db.Student.find({name:"Dhairya"}).limit(1) [it will by default show 1st data of same names]
+(17) db.Student.find({name:"Dhairya"}).limit(1).skip(1) [it will show 2nd data of same names]
+(18) db.Student.updateOne({name:"Bhavin"}, {$set: {name:"Devarsh"}}) [to change content of data]
+(19) db.Student.updateMany({name:"Dhairya"}, {$set: {Age:20}})
+(20) db.Student.deleteOne({}) [it will by default delete first data]
+(21) db.Student.deleteOne({Rollno:108}) [it will delete particular data]
+(22) db.Student.deleteMany({}) [it will delete all the data]
+(23) db.Student.find({name:"Dhairya"}).count() [it will count no.of records]
+(24) db.Student.find().sort() [it will not sort]
+(25) db.Student.find().sort({Age:-1}) [it will sort in descending]
+(26) db.Student.find().sort({Age:1}) [it will sort in ascending]
 
-After downloading "https://www.mongodb.com/try/download/shell", extract the file, then open file and click on "bin"
-and then copy the exe files to "C" drive.
+// Comparision Operator
+(27) $eq (equals to) => db.Student.find({Age: {$eq:20}}) [it will show data if age=20]
+(28) $gt (greater than) => db.Student.find({Age: {$gt:20}}) [it will show data if age>20]
+(29) $gte (greater than equal to) => db.Student.find({Age: {$gt:20}}) [it will show data if age>=20]
+(30) $lt (less than) => db.Student.find({Age: {$lt:20}}) [it will show data if age<20]
+(31) $lte (less than equal to) => db.Student.find({Age: {$lte:20}}) [it will show data if age<=20]
+(32) $in => db.Student.find({Age: {$in:[20,25]}}) [it will show data where age=20 or age=25]
+(33) $nin => db.Student.find({Age: {$nin:[20,25]}}) [it will show data other than where age=20 or age=25]
+(34) $ne (not equal to) => db.Student.find({Age: {$ne:20}}) [it will show data if age!=20]
+
+[Ques] update only one document with branch CSE and age 21
+=> db.Student.updateOne({name:"Maanan"}, {$set: {branch:"CSE", Age:21}}, {upsert:true})
+
+// Logical Operator
+(35) $and => db.Student.find({$and: [{name:"Dhairya"}, {Age:20}]})
+(36) $or => db.Student.find({$or: [{name:"Dhairya"}, {Age:20}]})
+(37) $nor => db.Student.find({$nor: [{name:"Dhairya"}, {Age:20}]})
+(38) $not => db.Student.find({Age: {$not: {$lt:20}}})
+
+//Field Update Operator
+(39) $inc (increment) => db.Student.updateMany({}, {$inc: {Age:10}}) [it will increase every age value by "10"]
+(40) $mul => db.Student.updateMany({}, {$mul: {Rollno:10}}) [it will multiply every age value by "10"]
+(41) $unset => db.Student.updateOne({name:"Maanan"}, {$unset: {branch:"CSE"}}, {upsert:true}) [it will remove that particular field]
+(42) $rename => db.Student.updateMany({}, {$rename: {"Dhairya":"Zulfi"}})
