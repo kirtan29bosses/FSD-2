@@ -65,3 +65,25 @@ After running cmd:-
 (40) $mul => db.Student.updateMany({}, {$mul: {Rollno:10}}) [it will multiply every age value by "10"]
 (41) $unset => db.Student.updateOne({name:"Maanan"}, {$unset: {branch:"CSE"}}, {upsert:true}) [it will remove that particular field]
 (42) $rename => db.Student.updateMany({}, {$rename: {"Dhairya":"Zulfi"}})
+
+// Cursor
+(43) let rec = db.Student.find() after running this line then write:-
+=> rec
+
+// Regex
+(44) db.Student.insertMany([{Rollno: 110, name: "Test", Age:20}, {Rollno: 111, name: "TEST", Age:22}, {Rollno: 112, name: "tesT", Age:24}, {Rollno: 113, name: "12test", Age:26}, {Rollno: 114, name: "Test123", Age:28}, {Rollno: 115, name: "Testing", Age:30}])
+(45) db.Student.find({name: {$regex: /test/}})
+(46) db.Student.find({name: {$regex: /test/i}}) [For case sensitive]
+(47) db.Student.find({name: {$regex: /^test/}}) [Must start with 'test']
+(48) db.Student.find({name: {$regex: /test$/}}) [Must end with 'test']
+(49) db.Student.find({name: {$regex: /[0-9]$/}}) [Must end with '0-9]
+(50) db.Student.find({name: {$regex: /^[0-9]/}}) or db.Student.find({name: {$regex: /^\d/}})
+[Must start with '0-9]
+(51) db.Student.find({name: {$regex: /^[0-9]+$/}}) [Only digits allowed]
+
+(52) db.Student.updateMany({}, {$set: {join_date: new Date()}}) [To insert column] 
+(53) db.Student.updateMany({}, {$unset: {join_date: ""}}) [To delete column]
+(54) db.Student.find({}, {name: 1})
+(55) 
+(56) 
+(57) 
