@@ -84,3 +84,6 @@ After running cmd:-
 (52) db.Student.updateMany({}, {$set: {join_date: new Date()}}) [To insert column] 
 (53) db.Student.updateMany({}, {$unset: {join_date: ""}}) [To delete column]
 (54) db.Student.find({}, {name: 1})
+
+In VsCode:-
+=> npm install mongoose
