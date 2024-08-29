@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-2</title>
+</head>
+<body>
+    <form action="/process_get" method="get">
+        <label> Username: </label>
+        <input type="text" maxlength="30" placeholder="Username" name="uname"> <br> <br>
+        <label> Email: </label>
+        <input type="email" placeholder="Email" name="email"> <br> <br>
+        <label> Feedback: </label>
+        <select name="feedback">
+            <option value="None"> None </option>
+            <option value="Bad"> Bad </option>
+            <option value="Good"> Good </option>
+            <option value="Very Good"> Very Good </option>
+            <option value="Excellent"> Excellent </option>
+        </select> <br> <br>
+        <label> Comments: </label>
+        <textarea rows="5" cols="20" placeholder="Comments" name="comment"> </textarea><br> <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
