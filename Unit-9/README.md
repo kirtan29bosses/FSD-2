@@ -88,3 +88,5 @@ After running cmd:-
 In VsCode:-
 => npm install mongoose
 => npm install express
+
+(55) db.Student.find({Age: {$gt: 30}}).explain("executionStats")
