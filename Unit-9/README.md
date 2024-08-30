@@ -111,5 +111,24 @@ After this run point no. (55)
 // MongoDB Replication
 Folder structure:- data(folder)/db1(folder) and db2(folder) 
 
-And then write following in cmd:-
+And then write following in cmd and keep it running in background and open new cmd:-
 mongod --port 27020 --dbpath "D:/data/db1" --replSet rs1
+
+Then write following in cmd and keep it running in background and open new cmd:-
+mongod --port 27021 --dbpath "D:/data/db2" --replSet rs1
+
+Then write following in cmd:-
+mongosh --port 27020
+
+Then enter:-
+test> rs.initiate({_id: "rs1", members: [{_id: 0, host: "127.0.0.1:27020"}, {_id: 1, host: "127.0.0.1:27021"}]})
+rs1 [direct: other] test> rs.status
+
+Then open mongodb and change port in URL:- mongodb://localhost:27020 or mongodb://localhost:27021
+
+Open cmd & connect to mongodb://localhost:27020 and insert data in 'mydb' database.
+Now, open cmd & connect to mongodb://localhost:27021.
+
+Now in mongodb://localhost:27021, write:-
+rs1 [direct: secondary] mydb> db.getMongo().setReadPref("primaryPreferred")
+rs1 [direct: secondary] mydb> db.people.find()
