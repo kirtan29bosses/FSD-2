@@ -90,3 +90,20 @@ In VsCode:-
 => npm install express
 
 (55) db.Student.find({Age: {$gt: 30}}).explain("executionStats")
+
+// To create index (Single)
+(56) db.Student.createIndex({Age: 1})
+
+// To check index
+(57) db.Student.getIndexes()
+
+After this run point no. (55)
+
+// To delete index
+(58) db.Student.dropIndexes()
+
+// To create index (Compound)
+(59) db.Student.createIndex({Age: 1, name: -1})
+
+// To create index (Partial)
+(60) db.Student.createIndex({Age: 1}, {partialFilterExpression: {Age: {$gt: 30}}})
