@@ -107,3 +107,9 @@ After this run point no. (55)
 
 // To create index (Partial)
 (60) db.Student.createIndex({Age: 1}, {partialFilterExpression: {Age: {$gt: 30}}})
+
+// MongoDB Replication
+Folder structure:- data(folder)/db1(folder) and db2(folder) 
+
+And then write following in cmd:-
+mongod --port 27020 --dbpath "D:/data/db1" --replSet rs1
